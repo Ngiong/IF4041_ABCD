@@ -25,6 +25,9 @@ class AdjListGraph(object):
     def randomClusters(self, K: int):
         self.cluster = np.random.randint(K, size=self.n_V)
 
+    def initClusters(self):
+        self.cluster = np.arange(self.n_V)
+
     def print(self):
         print('n_V = ', self.n_V)
         print('n_E = ', self.n_E)
