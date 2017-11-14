@@ -36,3 +36,9 @@ class AdjListGraph(object):
             for v in self.adj_list[u]:
                 print(str(v)+'/'+str(self.adj_list[u][v])+' ', end='')
             print()
+
+    def printDegrees(self):
+        print('n_V = ', self.n_V)
+        print('n_E = ', self.n_E)
+        for u in range(min(self.n_V, 20)):
+            print('[' + str(u) + '] : ', len(self.adj_list[u]))

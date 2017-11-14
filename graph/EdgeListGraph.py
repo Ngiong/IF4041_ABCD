@@ -14,8 +14,11 @@ class EdgeListGraph(object):
             self.edge_list[i][1] = input('['+idx+'] '+'v: ')
             self.edge_list[i][2] = input('['+idx+'] '+'w: ')
 
+    def fromCSV(self, path):
+        self.edge_list = np.genfromtxt(path, delimiter=',', dtype=int)
+
     def print(self):
-        for i in range(self.n_E):
+        for i in range(min(self.n_E, 20)):
             print(self.edge_list[i][0], end=' ')
             print(self.edge_list[i][1], end=' ')
             print(self.edge_list[i][2])
