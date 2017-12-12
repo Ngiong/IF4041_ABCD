@@ -70,6 +70,5 @@ class GraphClusterer(object):
             else:
                 stop = True
 
-
-
+    
 

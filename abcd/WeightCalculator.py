@@ -24,7 +24,7 @@ class WeightCalculator(object):
                     node1 = min(self.secsDF['user'][i], self.secsDF['user'][endIdx])
                     node2 = max(self.secsDF['user'][i], self.secsDF['user'][endIdx])
                     if(node1 != node2):
-                        if (not adjTable.has_key((node1, node2))):
+                        if not ((node1, node2) in adjTable):
                             adjTable[(node1,node2)] = 0
                         adjTable[(node1, node2)] += 1
 
